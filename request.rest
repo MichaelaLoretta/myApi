@@ -1,0 +1,27 @@
+
+//DESTINATION ENDPOINTS
+
+GET http://localhost:3000/destinations HTTP/1.1
+
+###
+
+POST http://localhost:3000/destinations/new
+Content-Type: application/json
+
+{
+"name": "Obersvatorielundens lekpark",
+"district": "Vasastaden",
+"latitude": "7893733",
+"longitude": "8692782"
+}
+
+###
+
+//TO GET A SINGLE DESTINATION, OT AN ID AT THGE END OF URL
+GET http://localhost:3000/destination/63946e3d7bcd94334cac4ab4
+
+###
+//TO DELETE A DESTINATION, PUT AN ID AT THE END OF URL
+
+DELETE  http://localhost:3000/destinations/delete/639473081ac2e53a2f271cfb
+###
