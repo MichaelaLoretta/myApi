@@ -1,4 +1,3 @@
-
 //DESTINATION ENDPOINTS
 
 GET http://localhost:3000/destinations HTTP/1.1
@@ -9,10 +8,10 @@ POST http://localhost:3000/destinations/new
 Content-Type: application/json
 
 {
-"name": "Obersvatorielundens lekpark",
-"district": "Vasastaden",
-"latitude": "7893733",
-"longitude": "8692782"
+"name": "Kulturhuset",
+"district": "Stockholm City",
+"latitude": "78954533",
+"longitude": "2792782"
 }
 
 ###

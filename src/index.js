@@ -10,10 +10,8 @@ const mongoose = require("mongoose");
 //DATABASE CONNECTION
 
 mongoose
-  .connect(
-    process.env.DATABASE_URL
-  )
-  .then(console.log("DATABASE Running"))
+  .connect(process.env.DATABASE_URL)
+  .then(() => console.log("DATABASE Running"))
   .catch((err) => console.log(err));
 
 //ROUTES
@@ -25,13 +23,12 @@ routes.forEach((route) => {
 
 //SERVER CONNECTION
 const start = async () => {
-  try {
-    await fastify.listen(3000);
-    fastify.log.info(`Server is Running`);
-  } catch (error) {
-    fastify.log.error;
-    process.exit(1);
-  }
+  fastify.listen({ port: 3000 })
+  .then((address) => console.log(`server listening on ${address}`))
+  .catch(err => {
+    console.log("Error starting server:", err)
+    process.exit(1)
+  })
 };
 
 start();

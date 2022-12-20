@@ -1,5 +1,6 @@
 const Destination = require("../models/Destination");
 
+//GET ALL DESTINATIONS
 exports.getDestinations = async (req, reply) => {
   try {
     const destinations = await Destination.find();
@@ -8,6 +9,8 @@ exports.getDestinations = async (req, reply) => {
     console.log(error);
   }
 };
+
+//GET ONE SPECIFIC DESTINATION
 
 exports.getDestination = async (req, reply) => {
   try {
@@ -18,14 +21,36 @@ exports.getDestination = async (req, reply) => {
   }
 };
 
+//ADD DESTINATION 
+
 exports.addDestination = async (req, reply) => {
   try {
+    //Creates a new destination and saves it in MongoDB
     const newDestination = new Destination(req.body);
     return newDestination.save();
   } catch (error) {
     console.log(error);
   }
 };
+
+
+// UPDATE DESTINATION
+
+exports.updateDestination = async (req, reply) => {
+  try {
+    
+   const destination = req.body
+   const {...updatedDestination} = destination
+   const update = await Destination.findByIdAndUpdate(req.params.id, updatedDestination, {new: true})
+   return update
+
+  } catch (error) {
+    console.log(error);
+  }
+
+
+};
+
 
 exports.deleteDestination = async (req, reply) => {
   try {

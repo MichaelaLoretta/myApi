@@ -4,10 +4,10 @@ const mongoose = require("mongoose");
 
 const destinationSchema = new mongoose.Schema({
 
-  name: String,
-  district: String,
-  latitude: Number,
-  longitude: Number,
+  name: {type: String, required: true},
+  district: {type: String, required: true},
+  latitude: {type: Number, required: true},
+  longitude: {type: Number, required: true},
   
 });
 
