@@ -15,20 +15,21 @@ mongoose
   .catch((err) => console.log(err));
 
 //ROUTES
-//since routes is an array, i can just loop thru it
 
-routes.forEach((route) => {
-  fastify.route(route);
-});
+
 
 //SERVER CONNECTION
 const start = async () => {
+  
   fastify.listen({ port: 3000 })
   .then((address) => console.log(`server listening on ${address}`))
   .catch(err => {
     console.log("Error starting server:", err)
     process.exit(1)
   })
+  routes.forEach((route) => {
+  fastify.route(route);
+});
 };
 
 start();

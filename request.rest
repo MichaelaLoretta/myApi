@@ -16,11 +16,26 @@ Content-Type: application/json
 
 ###
 
-//TO GET A SINGLE DESTINATION, OT AN ID AT THGE END OF URL
-GET http://localhost:3000/destination/63946e3d7bcd94334cac4ab4
+//TO GET A SINGLE DESTINATION, PUT AN ID AT THHE END OF URL
+GET http://localhost:3000/destination/
+
+
+###
+
+// TO UPDATE A DESTINATION, OUT A ID AT THE END OF URL
+
+PUT http://localhost:3000/destinations/update/
+Content-Type: application/json
+
+{
+"name": "Lilla Bajskorvsparken",
+"district": "Whereever",
+"latitude": "12345678",
+"longitude": "98765432"
+}
 
 ###
 //TO DELETE A DESTINATION, PUT AN ID AT THE END OF URL
 
-DELETE  http://localhost:3000/destinations/delete/639473081ac2e53a2f271cfb
+DELETE  http://localhost:3000/destinations/delete/63946e637bcd94334cac4aba
 ###

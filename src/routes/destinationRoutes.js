@@ -17,6 +17,11 @@ const routes = [
     handler: destinationController.addDestination
   },
   {
+    method: "PUT",
+    url: "/destinations/update/:id",
+    handler: destinationController.updateDestination
+  },
+  {
     method: "DELETE",
     url: "/destinations/delete/:id",
     handler: destinationController.deleteDestination

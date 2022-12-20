@@ -51,6 +51,7 @@ exports.updateDestination = async (req, reply) => {
 
 };
 
+//DELETE A DESTINATION
 
 exports.deleteDestination = async (req, reply) => {
   try {
