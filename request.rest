@@ -8,10 +8,10 @@ POST http://localhost:3000/destinations/new
 Content-Type: application/json
 
 {
-"name": "Kulturhuset",
-"district": "Stockholm City",
-"latitude": "78954533",
-"longitude": "2792782"
+"name": "Skånelängtans Parklek",
+"district": "Södermalm",
+"latitude": "59.31136",
+"longitude": "18.07048"
 }
 
 ###
@@ -22,20 +22,20 @@ GET http://localhost:3000/destination/
 
 ###
 
-// TO UPDATE A DESTINATION, OUT A ID AT THE END OF URL
+// TO UPDATE A DESTINATION, PUT A ID AT THE END OF URL
 
 PUT http://localhost:3000/destinations/update/
 Content-Type: application/json
 
 {
-"name": "Lilla Bajskorvsparken",
-"district": "Whereever",
-"latitude": "12345678",
-"longitude": "98765432"
+"name": "Lumaparken",
+"district": "Hammarby Sjöstad",
+"latitude": "59.31109",
+"longitude": "18.02225"
 }
 
 ###
 //TO DELETE A DESTINATION, PUT AN ID AT THE END OF URL
 
-DELETE  http://localhost:3000/destinations/delete/63946e637bcd94334cac4aba
+DELETE  http://localhost:3000/destinations/delete/
 ###
